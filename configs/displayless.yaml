@@ -1,0 +1,4 @@
+platform:
+  display_present: false
+  lid_present: false
+  psu_wattage: 90
