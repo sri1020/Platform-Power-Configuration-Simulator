@@ -1,4 +1,4 @@
-from platform.display import Display
+from hardware.display import Display
 
 
 class DisplayService:

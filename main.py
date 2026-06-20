@@ -1,7 +1,7 @@
 import sys
 import yaml
 
-from platform.device import Device
+from hardware.device import Device
 
 from services.display_service import DisplayService
 from services.lid_service import LidService

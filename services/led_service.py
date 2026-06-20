@@ -1,19 +1,10 @@
-from platform.lid import Lid
+class LedService:
 
+    def runtime(self):
+        print("LED -> Runtime")
 
-class LidService:
+    def shutdown(self):
+        print("LED -> Shutdown Complete")
 
-    def __init__(self, lid_present):
-        self.lid_present = lid_present
-
-    def start(self):
-
-        if self.lid_present:
-            lid = Lid()
-            lid.enable()
-
-        else:
-            print(
-                "Lid Not Present. "
-                "Lid Service Disabled"
-            )
+    def hibernate(self):
+        print("LED -> Hibernate Complete")
