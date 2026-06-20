@@ -2,7 +2,7 @@ import sys
 import yaml
 
 from hardware.device import Device
-
+from utils.logger import logger
 from services.display_service import DisplayService
 from services.lid_service import LidService
 from services.led_service import LedService
@@ -28,6 +28,9 @@ def main():
         return
 
     config = load_config(sys.argv[1])
+    logger.info(
+    "Platform configuration loaded"
+)
 
     platform_cfg = config["platform"]
 
@@ -38,6 +41,9 @@ def main():
     )
 
     device.show_info()
+    logger.info(
+    "Starting platform services"
+)
 
     print("\nStarting Services...\n")
 
