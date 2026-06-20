@@ -1,5 +1,5 @@
 from hardware.display import Display
-
+from utils.logger import logger
 
 class DisplayService:
 
@@ -13,6 +13,10 @@ class DisplayService:
             display.initialize()
 
         else:
+            logger.warning(
+                "Display not present. "
+                "Skipping initialization"
+            )
             print(
                 "Display Not Present. "
                 "Skipping Display Initialization"
